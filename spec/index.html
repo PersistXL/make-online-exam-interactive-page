@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试题</title>
+</head>
+<body>
+<h2>统一建模语言理论测试</h2>
+<p>考试科目：统一建模语言&nbsp;&nbsp;&nbsp;时间：100分钟&nbsp;&nbsp;&nbsp;得分：100</p>
+<p>班级：
+    <input type="text"/>&nbsp;&nbsp;学号：
+    <input type="text"/>&nbsp;&nbsp;姓名：
+    <input type="text"/>
+</p>
+<h3>一、填空题（每题5分，共20分）</h3>
+<p>1.UML的中文全称是：
+    <input type="text" name="qc"/>
+</p>
+<p>2.对象最突出的特征是：
+    <input type="text" name="tz"/>&nbsp;&nbsp;
+    <input type="text" name="tz"/>&nbsp;&nbsp;
+    <input type="text" name="tz"/>
+</p>
+<h3>一、选择题（每题10分，共20分）</h3>
+<p>1.UML与软件工程的关系是：</p>
+<form>
+    <input type="radio" name="a1" value="a">(A)UML就是软件工程
+    <br/>
+    <input type="radio" name="a1" value="b">(B)UML参与到软件工程中软件开发过程的几个阶段
+    <br/>
+    <input type="radio" name="a1" value="c">(C)UML与软件工程无关
+    <br/>
+    <input type="radio" name="a1" value="d">(D)UML是软件工程的一部分
+    <br/>
+</form>
+<p>2.java语言支持：</p>
+<form>
+    <input type="radio" name="a2" value="a">(A)单继承
+    <br/>
+    <input type="radio" name="a2" value="b">(B)多继承
+    <br/>
+    <input type="radio" name="a2" value="c">(C)单继承和多继承都支持
+    <br/>
+    <input type="radio" name="a2" value="d">(D)单继承和多继承都不支持
+    <br/>
+</form>
+<h3>一、多择题（每题10分，共20分）</h3>
+<p>1.用例的粒度分为以下哪三种：</p>
+<form>
+    <input type="checkbox" name="a3" value="a">(A)概述级
+    <br/>
+    <input type="checkbox" name="a3" value="b">(B)需求级
+    <br/>
+    <input type="checkbox" name="a3" value="c">(C)用户目标级
+    <br/>
+    <input type="checkbox" name="a3" value="d">(D)子功能级
+    <br/>
+</form>
+<p>2.类图由以下哪三部分组成：</p>
+<form>
+    <input type="checkbox" name="a4" value="a">(A)名称（Name）
+    <br/>
+    <input type="checkbox" name="a4" value="b">(B)属性（Attribute）
+    <br/>
+    <input type="checkbox" name="a4" value="c">(C)操作（Operation）
+    <br/>
+    <input type="checkbox" name="a4" value="d">(D)方法（Function）
+    <br/>
+</form>
+<h3>一、判断题（每题10分，共20分）</h3>
+<p>1.用例图只是用于和客户交流和沟通的，用于确定需求。
+    <input type="radio" name="a5" value="a">对
+    <input type="radio" name="a5" value="b">错 </p>
+<p>2.在状态图中，终止状态在一个状态图中允许有任意多个。
+    <input type="radio" name="a6" value="a">对
+    <input type="radio" name="a6" value="b">错 </p>
+<h3>一、简答题（每题20分，共20分）</h3>
+<p>1.简述什么是模型以及模型的表现形式？</p>
+<textarea name="jd" rows="8" cols="50"></textarea>
+
+<br/>
+<br/>
+<br/>
+<form>
+    <input type="button" value="计算分数" name="c" onclick="totalScore()"/>
+</form>
+<script type="text/javascript" src="../app.js"></script>
+<script type="text/javascript">
+    function totalScore() {
+        var sum = 0;
+        let name = document.getElementsByName("qc");
+        for (var i = 0; i < name.length; i++) {
+            if (name[i].value === "统一建模语言") {
+                sum += 5;
+            }
+        }
+        let name1 = document.getElementsByName("tz");
+        for (var i = 0; i < name1.length; i++) {
+            if (name1[i].value == '封装性' && name1[i + 1].value == '继承性' && name1[i + 2].value == '多态性') {
+                sum += 15;
+            }
+        }
+        let name_a1 = document.getElementsByName('a1');
+        for (var i = 0; i < name_a1.length; i++) {
+            if (name_a1[i].checked == true) {
+                if (name_a1[i].value == 'b') {
+                    sum += 10;
+                }
+            }
+        }
+        let name_a2 = document.getElementsByName('a2');
+        for (var i = 0; i < name_a2.length; i++) {
+            if (name_a2[i].checked == true) {
+                if (name_a2[i].value == 'a') {
+                    sum += 10;
+                }
+            }
+        }
+        let name_a3 = document.getElementsByName('a3');
+        for (var i = 0; i < name_a3.length; i++) {
+            if (name_a3[i].checked == true) {
+                if (name_a3[i].value == 'a' && name_a3[i + 1].value == 'b' && name_a3[i + 3].value == 'd') {
+                    sum += 10;
+                }
+            }
+        }
+        let name_a4 = document.getElementsByName('a4');
+        for (var i = 0; i < name_a4.length; i++) {
+            if (name_a4[i].checked == true) {
+                if (name_a4[i].value == 'a' && name_a4[i + 1].value == 'b' && name_a4[i + 2].value == 'c') {
+                    sum += 10;
+                }
+            }
+        }
+        let name_a5 = document.getElementsByName('a5');
+        for (var i = 0; i < name_a5.length; i++) {
+            if (name_a5[i].checked == true) {
+                if (name_a5[i].value == 'b') {
+                    sum += 10;
+                }
+            }
+        }
+        let name_a6 = document.getElementsByName('a6');
+        for (var i = 0; i < name_a6.length; i++) {
+            if (name_a6[i].checked == true) {
+                if (name_a6[i].value == 'a') {
+                    sum += 10;
+                }
+            }
+        }
+        let c = document.getElementsByName('jd');
+        var r='模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式，可以是物理实体，可以是某种图形或者是一种数学表达式。'
+        for (var i = 0; i < c.length; i++) {
+            if (c[i].value == r) {
+                sum += 20;
+            }
+        }
+        alert(sum);
+    }
+</script>
+</body>
+</html>
